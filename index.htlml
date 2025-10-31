@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .email {
+            font-size: 1.2em;
+            color: #2c3e50;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px;
+            background: #e8f4fd;
+            border-radius: 5px;
+        }
+        .test-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My GitHub Pages Site</h1>
+        <p>This is the main homepage of my website.</p>
+        
+        <div class="email">Email: 23f2001912@ds.study.iitm.ac.in</div>
+        
+        <p>Contact me at the email above for any questions!</p>
+        
+        <a href="/nonexistent-page" class="test-link">Test 404 Page</a>
+    </div>
+</body>
+</html>

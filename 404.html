@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space | My Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            padding: 40px;
+        }
+        
+        .astronaut {
+            font-size: 120px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #ff6b6b;
+            text-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+            margin-bottom: 10px;
+        }
+        
+        .error-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4ecdc4;
+        }
+        
+        .error-message {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            background: linear-gradient(135deg, #44a08d, #4ecdc4);
+        }
+        
+        .planet {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle at 30% 30%, #ff9a76, #ff6b6b);
+            border-radius: 50%;
+            margin: 30px auto;
+            position: relative;
+            box-shadow: 0 0 50px rgba(255, 107, 107, 0.3);
+        }
+        
+        .crater {
+            position: absolute;
+            background: rgba(0,0,0,0.2);
+            border-radius: 50%;
+        }
+        
+        .crater-1 { width: 40px; height: 40px; top: 30px; left: 50px; }
+        .crater-2 { width: 25px; height: 25px; top: 70px; left: 120px; }
+        .crater-3 { width: 35px; height: 35px; top: 120px; left: 60px; }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="error-container">
+        <div class="astronaut">👨‍🚀</div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Houston, We Have a Problem!</h1>
+        
+        <p class="error-message">
+            It looks like you've ventured into uncharted territory. The page you're looking for seems to have drifted off into the cosmic void.
+        </p>
+        
+        <div class="planet">
+            <div class="crater crater-1"></div>
+            <div class="crater crater-2"></div>
+            <div class="crater crater-3"></div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>🌍 Mission Control</h3>
+            <p>If you believe this is a system error, contact our ground team:</p>
+            <p><strong>23f2001912@ds.study.iitm.ac.in</strong></p>
+        </div>
+        
+        <a href="/" class="home-button">
+            🚀 Return to Home Base
+        </a>
+    </div>
+
+    <script>
+        // Create twinkling stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.width = Math.random() * 3 + 'px';
+            star.style.height = star.style.width;
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
