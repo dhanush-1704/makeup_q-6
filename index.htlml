@@ -3,52 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>My GitHub Pages Site - 23f2001912@ds.study.iitm.ac.in</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
+        
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
         }
-        .email {
-            font-size: 1.2em;
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h3 {
             color: #2c3e50;
-            font-weight: bold;
-            margin: 20px 0;
-            padding: 10px;
-            background: #e8f4fd;
-            border-radius: 5px;
+            margin-bottom: 10px;
         }
+        
+        .contact-section {
+            background: #e8f4fd;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+            border: 2px solid #3498db;
+        }
+        
+        .contact-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .email-display {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 2px solid #3498db;
+            display: inline-block;
+        }
+        
         .test-link {
             display: inline-block;
-            background: #3498db;
+            background: #e74c3c;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 25px;
             margin-top: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .test-link:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .footer-email {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 10px;
+        }
+        
+        .email-plain {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My GitHub Pages Site</h1>
-        <p>This is the main homepage of my website.</p>
+        <div class="header">
+            <h1>🌟 Welcome to My GitHub Pages Site</h1>
+            <p>Email: <span class="email-plain">23f2001912@ds.study.iitm.ac.in</span></p>
+        </div>
         
-        <div class="email">Email: 23f2001912@ds.study.iitm.ac.in</div>
+        <div class="content">
+            <h2>About This Project</h2>
+            <p>This GitHub Pages site demonstrates the implementation of a custom 404 error page to enhance user experience when navigating to non-existent pages.</p>
+            
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>🚀 Fast & Reliable</h3>
+                    <p>Built with modern web standards for optimal performance</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Looks great on all devices and screen sizes</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 Beautiful UI</h3>
+                    <p>Clean and modern user interface</p>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h2>📧 Contact Information</h2>
+                <div class="email-display">23f2001912@ds.study.iitm.ac.in</div>
+                <p>Feel free to reach out for any questions or collaborations!</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <p>Test the custom 404 page by visiting a non-existent URL:</p>
+                <a href="/nonexistent-page" class="test-link">Test 404 Page →</a>
+            </div>
+        </div>
         
-        <p>Contact me at the email above for any questions!</p>
-        
-        <a href="/nonexistent-page" class="test-link">Test 404 Page</a>
+        <div class="footer">
+            <p>&copy; 2024 My GitHub Pages Site</p>
+            <p class="footer-email">Contact: 23f2001912@ds.study.iitm.ac.in</p>
+            <p>Repository: makeup_q-6</p>
+        </div>
     </div>
 </body>
 </html>
